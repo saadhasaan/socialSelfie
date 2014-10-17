@@ -44,7 +44,7 @@
     appDelegate=(SocialSelfieAppDelegate *)[UIApplication sharedApplication].delegate;
 }
 -(void)showMenu:(id)sender{
-    [appDelegate showSlideMenu];
+
 }
 - (void)didReceiveMemoryWarning
 {

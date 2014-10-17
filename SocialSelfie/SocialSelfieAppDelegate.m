@@ -7,7 +7,7 @@
 //
 
 #import "SocialSelfieAppDelegate.h"
-#import "JASidePanelController.h"
+#import "HomeViewController.h"
 
 @implementation SocialSelfieAppDelegate
 
@@ -17,44 +17,18 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    
-    self.rootVC = [[JASidePanelController alloc] init];
-    self.rootVC.shouldDelegateAutorotateToVisiblePanel = NO;
-    
-    self.leftSlideVC=[[LeftSlideViewController alloc]init];
-    self.centerMainVC=[[CenterMainViewController alloc]init];
-
-    self.centerNavController=[[UINavigationController alloc] initWithRootViewController:self.centerMainVC];
-
-	self.rootVC.leftPanel = self.leftSlideVC;
-	self.rootVC.centerPanel = self.centerNavController;
+    HomeViewController * homeVC=[[HomeViewController alloc]init];
+    mainNavigationController=[[UINavigationController alloc]initWithRootViewController:homeVC];
 	
-	self.window.rootViewController = self.rootVC;
+    [mainNavigationController.navigationBar setHidden:YES];
+    
+	self.window.rootViewController = mainNavigationController;
     [self.window makeKeyAndVisible];
     return YES;
     
     return YES;
 }
-#pragma mark:Action for view changings
--(BOOL)isCurrentCenterViewController:(id)controller{
-    if([[self.centerNavController.viewControllers lastObject]isKindOfClass:controller])
-    {
-        return YES;
-    }
-    return NO;
-}
--(void)changeCenterViewController:(id)controller{
-//    [self.centerNavController setViewControllers:[NSArray arrayWithObject:controller] animated:NO];
-    [self.centerNavController pushViewController:controller animated:NO];
-    self.rootVC.centerPanel = self.centerNavController;
-//    [self.rootVC showCenterPanelAnimated:YES];
-}
--(void)changeCenterViewControllerToCenterMainView{
-    [self.centerNavController setViewControllers:[NSArray arrayWithObject:self.centerMainVC] animated:YES];
-}
--(void)showSlideMenu{
-    [self.rootVC showLeftPanelAnimated:YES];
-}
+
 #pragma mark:UIApplication 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

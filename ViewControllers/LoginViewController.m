@@ -26,7 +26,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    NSString * titleString =@"Sign in";
+    CGRect frame = CGRectMake(150, 0, [titleString sizeWithFont:[UIFont fontWithName:@"Helvetica-Bold" size:18]].width, 44);
+    UILabel *label = [[UILabel alloc] initWithFrame:frame];
+    label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont fontWithName:@"Helvetica-Bold" size:18];
+    label.textColor = [UIColor whiteColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.text = titleString;
+    self.navigationItem.titleView = label;
+    
     UIButton *btnTopBarLeft = [UIButton buttonWithType:UIButtonTypeCustom];
     [btnTopBarLeft setFrame:CGRectMake(0, 0, 31, 25)];
     [btnTopBarLeft.imageView setContentMode:UIViewContentModeLeft ];

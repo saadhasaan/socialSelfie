@@ -63,8 +63,8 @@
 	}
     
     cell.textLabel.text = [itemsArray objectAtIndex:indexPath.row];
-    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"icon%ld",indexPath.row+1]];
-    cell.imageView.highlightedImage=[UIImage imageNamed:[NSString stringWithFormat:@"icon%ld_pressed",indexPath.row+1]];
+    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"icon%d",indexPath.row+1]];
+    cell.imageView.highlightedImage=[UIImage imageNamed:[NSString stringWithFormat:@"icon%d_pressed",indexPath.row+1]];
 
     cell.textLabel.textColor=[UIColor colorWithRed:206.0/255.0 green:206.0/255.0 blue:206.0/255.0 alpha:1];
     cell.textLabel.highlightedTextColor=[UIColor blackColor];
@@ -81,10 +81,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if(indexPath.row==MENU_ITEM_LOGIN){
-        if(![appDelegate isCurrentCenterViewController:[LoginViewController class]]){
-            LoginViewController * loginVC=[[LoginViewController alloc]init];
-            [appDelegate changeCenterViewController:loginVC];
-        }
+//        if(![appDelegate isCurrentCenterViewController:[LoginViewController class]]){
+//            LoginViewController * loginVC=[[LoginViewController alloc]init];
+//            [appDelegate changeCenterViewController:loginVC];
+//        }
     }
     
 }

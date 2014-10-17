@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55693BCE19F1BE8C00106D17 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55693BCC19F1BE8C00106D17 /* HomeViewController.m */; };
+		55693BCF19F1BE8C00106D17 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55693BCD19F1BE8C00106D17 /* HomeViewController.xib */; };
+		55693BD319F1C01A00106D17 /* HomeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55693BD219F1C01A00106D17 /* HomeCollectionCell.m */; };
+		55693BD519F1C04000106D17 /* HomeCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55693BD419F1C04000106D17 /* HomeCollectionCell.xib */; };
+		55693BDA19F1C81F00106D17 /* MensGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55693BD819F1C81F00106D17 /* MensGalleryViewController.m */; };
+		55693BDB19F1C81F00106D17 /* MensGalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55693BD919F1C81F00106D17 /* MensGalleryViewController.xib */; };
+		55693BDF19F1CCBE00106D17 /* WoMensGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55693BDD19F1CCBE00106D17 /* WoMensGalleryViewController.m */; };
+		55693BE019F1CCBE00106D17 /* WoMensGalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55693BDE19F1CCBE00106D17 /* WoMensGalleryViewController.xib */; };
+		55693BE919F1CFA200106D17 /* CommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55693BE719F1CFA200106D17 /* CommentsViewController.m */; };
+		55693BEA19F1CFA200106D17 /* CommentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55693BE819F1CFA200106D17 /* CommentsViewController.xib */; };
+		55693BED19F1D0AF00106D17 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 55693BEC19F1D0AF00106D17 /* Comment.m */; };
+		55693BF019F1D13A00106D17 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55693BEF19F1D13A00106D17 /* CommentCell.m */; };
+		55693BF219F1D15100106D17 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55693BF119F1D15100106D17 /* CommentCell.xib */; };
+		55693BF519F1D2F200106D17 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 55693BF419F1D2F200106D17 /* User.m */; };
 		55883D3219B209700037D145 /* back-arrow-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 55883D1C19B209700037D145 /* back-arrow-pressed.png */; };
 		55883D3319B209700037D145 /* back-arrow-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55883D1D19B209700037D145 /* back-arrow-pressed@2x.png */; };
 		55883D3419B209700037D145 /* back-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 55883D1E19B209700037D145 /* back-arrow.png */; };
@@ -140,6 +154,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		55693BCB19F1BE8C00106D17 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		55693BCC19F1BE8C00106D17 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		55693BCD19F1BE8C00106D17 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		55693BD119F1C01A00106D17 /* HomeCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeCollectionCell.h; path = CustomCell/HomeCollectionCell.h; sourceTree = "<group>"; };
+		55693BD219F1C01A00106D17 /* HomeCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeCollectionCell.m; path = CustomCell/HomeCollectionCell.m; sourceTree = "<group>"; };
+		55693BD419F1C04000106D17 /* HomeCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeCollectionCell.xib; path = CustomCell/HomeCollectionCell.xib; sourceTree = "<group>"; };
+		55693BD719F1C81F00106D17 /* MensGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensGalleryViewController.h; sourceTree = "<group>"; };
+		55693BD819F1C81F00106D17 /* MensGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensGalleryViewController.m; sourceTree = "<group>"; };
+		55693BD919F1C81F00106D17 /* MensGalleryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MensGalleryViewController.xib; sourceTree = "<group>"; };
+		55693BDC19F1CCBE00106D17 /* WoMensGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WoMensGalleryViewController.h; sourceTree = "<group>"; };
+		55693BDD19F1CCBE00106D17 /* WoMensGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WoMensGalleryViewController.m; sourceTree = "<group>"; };
+		55693BDE19F1CCBE00106D17 /* WoMensGalleryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WoMensGalleryViewController.xib; sourceTree = "<group>"; };
+		55693BE619F1CFA200106D17 /* CommentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentsViewController.h; sourceTree = "<group>"; };
+		55693BE719F1CFA200106D17 /* CommentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentsViewController.m; sourceTree = "<group>"; };
+		55693BE819F1CFA200106D17 /* CommentsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentsViewController.xib; sourceTree = "<group>"; };
+		55693BEB19F1D0AF00106D17 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Comment.h; path = CustomClasses/Comment.h; sourceTree = "<group>"; };
+		55693BEC19F1D0AF00106D17 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Comment.m; path = CustomClasses/Comment.m; sourceTree = "<group>"; };
+		55693BEE19F1D13A00106D17 /* CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommentCell.h; path = CustomCell/CommentCell.h; sourceTree = "<group>"; };
+		55693BEF19F1D13A00106D17 /* CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommentCell.m; path = CustomCell/CommentCell.m; sourceTree = "<group>"; };
+		55693BF119F1D15100106D17 /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommentCell.xib; path = CustomCell/CommentCell.xib; sourceTree = "<group>"; };
+		55693BF319F1D2F200106D17 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = CustomClasses/User.h; sourceTree = "<group>"; };
+		55693BF419F1D2F200106D17 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = CustomClasses/User.m; sourceTree = "<group>"; };
 		55883D1C19B209700037D145 /* back-arrow-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-arrow-pressed.png"; sourceTree = "<group>"; };
 		55883D1D19B209700037D145 /* back-arrow-pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-arrow-pressed@2x.png"; sourceTree = "<group>"; };
 		55883D1E19B209700037D145 /* back-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-arrow.png"; sourceTree = "<group>"; };
@@ -348,6 +384,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55693BD019F1BFC800106D17 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				55693BD119F1C01A00106D17 /* HomeCollectionCell.h */,
+				55693BD219F1C01A00106D17 /* HomeCollectionCell.m */,
+				55693BD419F1C04000106D17 /* HomeCollectionCell.xib */,
+				55693BEE19F1D13A00106D17 /* CommentCell.h */,
+				55693BEF19F1D13A00106D17 /* CommentCell.m */,
+				55693BF119F1D15100106D17 /* CommentCell.xib */,
+			);
+			name = CustomCells;
+			sourceTree = "<group>";
+		};
+		55693BD619F1C23600106D17 /* CustomClasses */ = {
+			isa = PBXGroup;
+			children = (
+				55693BEB19F1D0AF00106D17 /* Comment.h */,
+				55693BEC19F1D0AF00106D17 /* Comment.m */,
+				55693BF319F1D2F200106D17 /* User.h */,
+				55693BF419F1D2F200106D17 /* User.m */,
+			);
+			name = CustomClasses;
+			sourceTree = "<group>";
+		};
 		55883D1B19B209700037D145 /* CenterMain */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,6 +470,8 @@
 		55CEFBB119A8ABF00092CA6F = {
 			isa = PBXGroup;
 			children = (
+				55693BD619F1C23600106D17 /* CustomClasses */,
+				55693BD019F1BFC800106D17 /* CustomCells */,
 				55CEFCBD19A8CFDF0092CA6F /* Slices */,
 				55CEFBED19A8ACE40092CA6F /* OpenSourceFrameWorks */,
 				55CEFC7419A8ACE50092CA6F /* ViewControllers */,
@@ -792,6 +854,18 @@
 				55883D7419B232680037D145 /* SignupViewController.xib */,
 				559B2A2F19B303EC00FB0BF9 /* BaseViewController.h */,
 				559B2A3019B303EC00FB0BF9 /* BaseViewController.m */,
+				55693BCB19F1BE8C00106D17 /* HomeViewController.h */,
+				55693BCC19F1BE8C00106D17 /* HomeViewController.m */,
+				55693BCD19F1BE8C00106D17 /* HomeViewController.xib */,
+				55693BD719F1C81F00106D17 /* MensGalleryViewController.h */,
+				55693BD819F1C81F00106D17 /* MensGalleryViewController.m */,
+				55693BD919F1C81F00106D17 /* MensGalleryViewController.xib */,
+				55693BDC19F1CCBE00106D17 /* WoMensGalleryViewController.h */,
+				55693BDD19F1CCBE00106D17 /* WoMensGalleryViewController.m */,
+				55693BDE19F1CCBE00106D17 /* WoMensGalleryViewController.xib */,
+				55693BE619F1CFA200106D17 /* CommentsViewController.h */,
+				55693BE719F1CFA200106D17 /* CommentsViewController.m */,
+				55693BE819F1CFA200106D17 /* CommentsViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -904,13 +978,16 @@
 				55883D4119B209700037D145 /* right-menu-icon-pressed@2x.png in Resources */,
 				55CEFC9A19A8ACE50092CA6F /* egopv_fullscreen_button.png in Resources */,
 				55883D6019B22D0B0037D145 /* signin-button.png in Resources */,
+				55693BD519F1C04000106D17 /* HomeCollectionCell.xib in Resources */,
 				55883D3619B209700037D145 /* comments-pressed.png in Resources */,
 				55883D5E19B22D0B0037D145 /* signin-button-pressed.png in Resources */,
 				55883D6119B22D0B0037D145 /* signin-button@2x.png in Resources */,
 				55883D7019B2323B0037D145 /* signup-button.png in Resources */,
 				55883D3819B209700037D145 /* comments.png in Resources */,
+				55693BDB19F1C81F00106D17 /* MensGalleryViewController.xib in Resources */,
 				55CEFC9819A8ACE50092CA6F /* egopv_error_placeholder.png in Resources */,
 				55CEFC9F19A8ACE50092CA6F /* egopv_photo_placeholder.png in Resources */,
+				55693BEA19F1CFA200106D17 /* CommentsViewController.xib in Resources */,
 				55883D3919B209700037D145 /* comments@2x.png in Resources */,
 				55883D3219B209700037D145 /* back-arrow-pressed.png in Resources */,
 				55CEFCB419A8AD350092CA6F /* LeftSlideViewController.xib in Resources */,
@@ -918,6 +995,7 @@
 				55CEFCA219A8ACE50092CA6F /* egopv_right@2x.png in Resources */,
 				55CEFC9919A8ACE50092CA6F /* egopv_error_placeholder@2x.png in Resources */,
 				55CEFC9E19A8ACE50092CA6F /* egopv_minimize_fullscreen_button.png in Resources */,
+				55693BE019F1CCBE00106D17 /* WoMensGalleryViewController.xib in Resources */,
 				55CEFBD019A8ABF00092CA6F /* Images.xcassets in Resources */,
 				55883D3B19B209700037D145 /* like-icon-pressed@2x.png in Resources */,
 				55883D4419B209700037D145 /* shear.png in Resources */,
@@ -930,7 +1008,9 @@
 				55883D3A19B209700037D145 /* like-icon-pressed.png in Resources */,
 				55883D3319B209700037D145 /* back-arrow-pressed@2x.png in Resources */,
 				55883D3F19B209700037D145 /* picture-area@2x.png in Resources */,
+				55693BF219F1D15100106D17 /* CommentCell.xib in Resources */,
 				55CEFC7A19A8ACE50092CA6F /* ActionSheetPickerViewController-iPad.xib in Resources */,
+				55693BCF19F1BE8C00106D17 /* HomeViewController.xib in Resources */,
 				55CEFCA119A8ACE50092CA6F /* egopv_right.png in Resources */,
 				55883D6819B22D290037D145 /* LoginViewController.xib in Resources */,
 				55883D3419B209700037D145 /* back-arrow.png in Resources */,
@@ -966,8 +1046,11 @@
 				55CEFC8019A8ACE50092CA6F /* AFHTTPRequestOperation.m in Sources */,
 				55CEFC7B19A8ACE50092CA6F /* ActionSheetPickerViewController.m in Sources */,
 				55CEFC9419A8ACE50092CA6F /* EGOImageView.m in Sources */,
+				55693BD319F1C01A00106D17 /* HomeCollectionCell.m in Sources */,
 				559B2A3119B303EC00FB0BF9 /* BaseViewController.m in Sources */,
+				55693BE919F1CFA200106D17 /* CommentsViewController.m in Sources */,
 				55CEFC7E19A8ACE50092CA6F /* DistancePickerView.m in Sources */,
+				55693BED19F1D0AF00106D17 /* Comment.m in Sources */,
 				55CEFCAE19A8ACE50092CA6F /* JSONKit.m in Sources */,
 				55CEFCA819A8ACE50092CA6F /* NSObject+SBJSON.m in Sources */,
 				55CEFCB319A8AD350092CA6F /* LeftSlideViewController.m in Sources */,
@@ -984,6 +1067,7 @@
 				55CEFC8D19A8ACE50092CA6F /* UIImageView+AFNetworking.m in Sources */,
 				55CEFC8E19A8ACE50092CA6F /* UIProgressView+AFNetworking.m in Sources */,
 				55CEFC8719A8ACE50092CA6F /* AFURLResponseSerialization.m in Sources */,
+				55693BCE19F1BE8C00106D17 /* HomeViewController.m in Sources */,
 				55CEFC9119A8ACE50092CA6F /* EGOImageButton.m in Sources */,
 				55CEFC8619A8ACE50092CA6F /* AFURLRequestSerialization.m in Sources */,
 				55CEFCB819A8AD580092CA6F /* CenterMainViewController.m in Sources */,
@@ -991,6 +1075,7 @@
 				55CEFCA619A8ACE50092CA6F /* JASidePanelController.m in Sources */,
 				55CEFC8519A8ACE50092CA6F /* AFURLConnectionOperation.m in Sources */,
 				55CEFC9719A8ACE50092CA6F /* EGOQuickPhotoSource.m in Sources */,
+				55693BDA19F1C81F00106D17 /* MensGalleryViewController.m in Sources */,
 				55CEFC8C19A8ACE50092CA6F /* UIButton+AFNetworking.m in Sources */,
 				55CEFC8A19A8ACE50092CA6F /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				55CEFCA719A8ACE50092CA6F /* UIViewController+JASidePanel.m in Sources */,
@@ -998,7 +1083,9 @@
 				55CEFCAF19A8ACE50092CA6F /* MBProgressHUD.m in Sources */,
 				55CEFC9619A8ACE50092CA6F /* EGOQuickPhoto.m in Sources */,
 				55CEFC8119A8ACE50092CA6F /* AFHTTPRequestOperationManager.m in Sources */,
+				55693BF519F1D2F200106D17 /* User.m in Sources */,
 				55CEFC7919A8ACE50092CA6F /* ActionSheetPickerCustomPickerDelegate.m in Sources */,
+				55693BF019F1D13A00106D17 /* CommentCell.m in Sources */,
 				55CEFC7519A8ACE50092CA6F /* AbstractActionSheetPicker.m in Sources */,
 				55CEFCAC19A8ACE50092CA6F /* SBJsonParser.m in Sources */,
 				55CEFC8419A8ACE50092CA6F /* AFSecurityPolicy.m in Sources */,
@@ -1011,6 +1098,7 @@
 				55CEFC9319A8ACE50092CA6F /* EGOImageLoader.m in Sources */,
 				55CEFC8B19A8ACE50092CA6F /* UIAlertView+AFNetworking.m in Sources */,
 				55CEFCA319A8ACE50092CA6F /* EGOPhotoCaptionView.m in Sources */,
+				55693BDF19F1CCBE00106D17 /* WoMensGalleryViewController.m in Sources */,
 				55CEFCA919A8ACE50092CA6F /* NSString+SBJSON.m in Sources */,
 				55CEFCAA19A8ACE50092CA6F /* SBJSON.m in Sources */,
 				55CEFC9219A8ACE50092CA6F /* EGOImageLoadConnection.m in Sources */,
@@ -1133,6 +1221,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SocialSelfie/SocialSelfie-Prefix.pch";
 				INFOPLIST_FILE = "SocialSelfie/SocialSelfie-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1146,6 +1235,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SocialSelfie/SocialSelfie-Prefix.pch";
 				INFOPLIST_FILE = "SocialSelfie/SocialSelfie-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

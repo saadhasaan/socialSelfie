@@ -14,16 +14,8 @@
 
 @interface SocialSelfieAppDelegate : UIResponder <UIApplicationDelegate>
 {
-    
+    UINavigationController * mainNavigationController;
 }
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) JASidePanelController *rootVC;
-@property (strong, nonatomic) LeftSlideViewController * leftSlideVC;
-@property (strong, nonatomic) CenterMainViewController * centerMainVC;
-@property (strong, nonatomic) UINavigationController * centerNavController;
-
--(BOOL)isCurrentCenterViewController:(id)controller;
--(void)changeCenterViewController:(id)controller;
--(void)showSlideMenu;
 @end
