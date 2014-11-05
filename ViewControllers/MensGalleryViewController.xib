@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MensGalleryViewController">
             <connections>
+                <outlet property="imagePager" destination="0gD-ks-F5C" id="Lz3-Pr-2fl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,7 +20,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-pic-thumb-top.png" id="siT-P2-VkY">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top_pic_icon.png" id="siT-P2-VkY">
                             <rect key="frame" x="108" y="16" width="31" height="31"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
@@ -33,7 +34,7 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OSx-9F-PQf">
                             <rect key="frame" x="1" y="15" width="47" height="34"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="back-arrow.png">
+                            <state key="normal" image="back_arrow.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <state key="highlighted" image="back-arrow-pressed.png"/>
@@ -48,46 +49,65 @@
                     <rect key="frame" x="0.0" y="504" width="320" height="64"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6JQ-Py-hKs">
-                            <rect key="frame" x="13" y="17" width="76" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6JQ-Py-hKs" userLabel="Button-Photos">
+                            <rect key="frame" x="79" y="-7" width="85" height="78"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="My Photo">
+                            <state key="normal" image="my_photo_icon.png">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <state key="highlighted" image="my_photo_icon_hover.png"/>
                             <connections>
                                 <action selector="goToPhotosAction:" destination="-1" eventType="touchUpInside" id="GTz-aU-DDs"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OLV-8O-QWb">
-                            <rect key="frame" x="119" y="17" width="83" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OLV-8O-QWb" userLabel="Button-Comment">
+                            <rect key="frame" x="190" y="12" width="42" height="39"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Comments">
+                            <state key="normal" image="commentes_icon.png">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <state key="highlighted" image="commentes_icon_hover.png"/>
                             <connections>
                                 <action selector="goToCommentsAction:" destination="-1" eventType="touchUpInside" id="s6m-8H-78c"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FUw-qC-JV8">
-                            <rect key="frame" x="264" y="17" width="46" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FUw-qC-JV8" userLabel="Button-Share">
+                            <rect key="frame" x="266" y="12" width="42" height="39"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Share">
+                            <state key="normal" image="shear_icon.png">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <state key="highlighted" image="shear_icon_hover.png"/>
                             <connections>
                                 <action selector="goToShareAction:" destination="-1" eventType="touchUpInside" id="lhw-lW-6Mj"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eH8-tE-nKK" userLabel="Button-Like">
+                            <rect key="frame" x="12" y="12" width="42" height="39"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="like_icon.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="like_icon_hover.png"/>
+                            <connections>
+                                <action selector="goToLikeAction:" destination="-1" eventType="touchUpInside" id="nRE-2V-3La"/>
                             </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wibiz.png" id="feD-Tl-s95">
+                <view contentMode="scaleToFill" id="0gD-ks-F5C" customClass="AFImagePager">
                     <rect key="frame" x="0.0" y="64" width="320" height="441"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                </imageView>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="a21-ci-N5j"/>
+                        <outlet property="delegate" destination="-1" id="hwy-1T-C94"/>
+                    </connections>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -95,8 +115,15 @@
     </objects>
     <resources>
         <image name="back-arrow-pressed.png" width="12" height="21"/>
-        <image name="back-arrow.png" width="12" height="21"/>
-        <image name="user-pic-thumb-top.png" width="31" height="31"/>
-        <image name="wibiz.png" width="320" height="200"/>
+        <image name="back_arrow.png" width="12" height="20"/>
+        <image name="commentes_icon.png" width="42" height="39"/>
+        <image name="commentes_icon_hover.png" width="42" height="39"/>
+        <image name="like_icon.png" width="42" height="39"/>
+        <image name="like_icon_hover.png" width="42" height="39"/>
+        <image name="my_photo_icon.png" width="42" height="39"/>
+        <image name="my_photo_icon_hover.png" width="42" height="39"/>
+        <image name="shear_icon.png" width="42" height="39"/>
+        <image name="shear_icon_hover.png" width="42" height="39"/>
+        <image name="top_pic_icon.png" width="30" height="30"/>
     </resources>
 </document>

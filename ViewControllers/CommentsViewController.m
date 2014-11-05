@@ -23,9 +23,9 @@
 @end
 
 @implementation CommentsViewController
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithNibName:@"CommentsViewController" bundle:Nil];
     if (self) {
         // Custom initialization
     }

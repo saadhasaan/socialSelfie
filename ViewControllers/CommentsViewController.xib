@@ -23,17 +23,13 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top-bar.png" id="Jum-0U-SRl">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9ZZ-ky-DYp">
                             <rect key="frame" x="-18" y="22" width="103" height="36"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="back-button.png">
+                            <state key="normal" image="back-arrow.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
-                            <state key="highlighted" image="back-button-press.png"/>
+                            <state key="highlighted" image="back-arrow-pressed.png"/>
                             <connections>
                                 <action selector="goBackAction:" destination="-1" eventType="touchUpInside" id="lK8-S2-UY9"/>
                             </connections>
@@ -46,6 +42,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" id="yEN-sE-stq">
                     <rect key="frame" x="0.0" y="66" width="320" height="502"/>
@@ -105,11 +102,10 @@
         </imageView>
     </objects>
     <resources>
-        <image name="back-button-press.png" width="23" height="36"/>
-        <image name="back-button.png" width="23" height="36"/>
+        <image name="back-arrow-pressed.png" width="12" height="21"/>
+        <image name="back-arrow.png" width="12" height="21"/>
         <image name="camera-button.png" width="24" height="18"/>
         <image name="comment-area.png" width="236" height="5"/>
         <image name="temp_box.png" width="295" height="347"/>
-        <image name="top-bar.png" width="320" height="55"/>
     </resources>
 </document>

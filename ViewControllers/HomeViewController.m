@@ -10,10 +10,14 @@
 #import "HomeCollectionCell.h"
 #import "MensGalleryViewController.h"
 #import "WoMensGalleryViewController.h"
+#import "Constants.h"
+#import "UtilsFunctions.h"
+#import "UploadPhotoViewController.h"
 
 @interface HomeViewController ()
 {
     NSMutableArray * mainArray;
+    NSMutableArray * imgIconArray;
 }
 @end
 
@@ -24,6 +28,7 @@
     self = [super initWithNibName:@"HomeViewController" bundle:nil];
     if (self) {
         mainArray=[[NSMutableArray alloc]init];
+        imgIconArray=[[NSMutableArray alloc]initWithArray:[NSArray arrayWithObjects:@"mens_gallery_icon",@"womens_gallery_icon",@"upload_photo",@"take_photo",@"my_photos",@"my_profile",@"my_alerts_icon",@"chat_icon",@"settings_icon", nil]];
     }
     return self;
 }
@@ -46,14 +51,15 @@
 #pragma mark:Custom Methods
 -(void)loadMainArray{
     [mainArray removeAllObjects];
-    [mainArray addObject:@"Mens Gallery"];
-    [mainArray addObject:@"Womens Gallery"];
-    [mainArray addObject:@"Upload Photo"];
-    [mainArray addObject:@"Take a Photo"];
-    [mainArray addObject:@"Chat"];
-    [mainArray addObject:@"My Profile"];
-    [mainArray addObject:@"My Alerts"];
-    [mainArray addObject:@"Settings"];
+    [mainArray addObject:kMenGallery];
+    [mainArray addObject:kWomenGallery];
+    [mainArray addObject:kUploadPhoto];
+    [mainArray addObject:kTakePhoto];
+    [mainArray addObject:kMyPhoto];
+    [mainArray addObject:kMyProfile];
+    [mainArray addObject:kMyAlerts];
+    [mainArray addObject:kChat];
+    [mainArray addObject:kSettings];
 }
 #pragma mark: UICollectionView Delegates and Datasource Methods
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -69,19 +75,47 @@
     HomeCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"HomeColCell" forIndexPath:indexPath];
     
     cell.titleLbl.text=[mainArray objectAtIndex:indexPath.row];
+    cell.imgView.image=[UIImage imageNamed:[imgIconArray objectAtIndex:indexPath.row]];
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"%li",(long)indexPath.row);
-    if([[mainArray objectAtIndex:indexPath.row]isEqualToString:@"Mens Gallery"]){
+    if([[mainArray objectAtIndex:indexPath.row]isEqualToString:kMenGallery]){
         MensGalleryViewController * mensGalleryVC=[[MensGalleryViewController alloc]init];
         [self.navigationController pushViewController:mensGalleryVC animated:YES];
     }
-    else if([[mainArray objectAtIndex:indexPath.row]isEqualToString:@"Womens Gallery"]){
+    else if([[mainArray objectAtIndex:indexPath.row]isEqualToString:kWomenGallery]){
         WoMensGalleryViewController * womensGalleryVC=[[WoMensGalleryViewController alloc]init];
         [self.navigationController pushViewController:womensGalleryVC animated:YES];
     }
+    else if([[mainArray objectAtIndex:indexPath.row]isEqualToString:kUploadPhoto]){
+        UIImagePickerController * imagePickerController = [[UIImagePickerController alloc] init];
+        imagePickerController.delegate = self;
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+            imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            [imagePickerController.navigationBar setTintColor:[UIColor colorWithRed:73.0/255.0 green:189.0/255.0 blue:143.0/255.0 alpha:1]];
+            [self presentViewController:imagePickerController animated:YES completion:nil];
+        }
+        else
+        {
+            ShowMessage(@"Error", @"Sorry! Camera is not available");
+        }
+    }
+}
+#pragma mark - UIImagePickerControllerDelegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    if([info valueForKey:UIImagePickerControllerOriginalImage]){
+        UIImage *chosenImage =info[UIImagePickerControllerOriginalImage];
+        [picker dismissViewControllerAnimated:YES completion:nil];
+        UploadPhotoViewController * uploadVC=[[UploadPhotoViewController alloc]initWithImage:[UtilsFunctions imageWithImage:chosenImage scaledToSize:CGSizeMake(640, 344)]];
+        [self.navigationController pushViewController:uploadVC animated:YES];
+    }
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

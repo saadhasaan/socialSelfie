@@ -7,12 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AFImagePager.h"
+#import "SharePopUpView.h"
 
-@interface MensGalleryViewController : UIViewController
+@interface MensGalleryViewController : UIViewController<SharePopUpViewDelegate>
+
+@property (weak, nonatomic) IBOutlet AFImagePager *imagePager;
+
 
 - (IBAction)goToPhotosAction:(id)sender;
 - (IBAction)backAction:(id)sender;
 - (IBAction)goToCommentsAction:(id)sender;
 - (IBAction)goToShareAction:(id)sender;
+- (IBAction)goToLikeAction:(id)sender;
 
 @end

@@ -8,6 +8,9 @@
 
 #import "SocialSelfieAppDelegate.h"
 #import "HomeViewController.h"
+#import "MainLoginViewController.h"
+#import "UtilsFunctions.h"
+#import "Constants.h"
 
 @implementation SocialSelfieAppDelegate
 
@@ -16,16 +19,18 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    
-    HomeViewController * homeVC=[[HomeViewController alloc]init];
-    mainNavigationController=[[UINavigationController alloc]initWithRootViewController:homeVC];
-	
+    if ([GetStringWithKey(kIsLoggedIn) isEqualToString:@"YES"]) {
+        HomeViewController * homeVC=[[HomeViewController alloc]init];
+        mainNavigationController=[[UINavigationController alloc]initWithRootViewController:homeVC];
+    }
+    else{
+        MainLoginViewController * homeVC=[[MainLoginViewController alloc]init];
+        mainNavigationController=[[UINavigationController alloc]initWithRootViewController:homeVC];
+    }
     [mainNavigationController.navigationBar setHidden:YES];
     
 	self.window.rootViewController = mainNavigationController;
     [self.window makeKeyAndVisible];
-    return YES;
-    
     return YES;
 }
 
